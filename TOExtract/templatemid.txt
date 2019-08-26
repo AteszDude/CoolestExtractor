@@ -1,0 +1,13 @@
+        var data = google.visualization.arrayToDataTable([
+          ['Opinion', 'Number of hits'],
+          ['Positive',     positive],
+          ['Negative',      negative],
+          ['Neutral',  neutral]
+        ]);
+
+        var options = {
+          title: 'Comment ratio'
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
+        chart.draw(data, options);

@@ -1,0 +1,33 @@
+<html>
+  <head>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+      google.load("visualization", "1", {packages:["corechart"]});
+      google.setOnLoadCallback(drawChart);
+      function drawChart() {
+	  //Start
+	  var positive = 130;
+	  var negative = 28;
+	  var neutral = 348;
+	  //End
+        var data = google.visualization.arrayToDataTable([
+          ['Opinion', 'Number of hits'],
+          ['Positive',     positive],
+          ['Negative',      negative],
+          ['Neutral',  neutral]
+        ]);
+
+        var options = {
+          title: 'Comment ratio'
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
+        chart.draw(data, options);
+      }
+    </script>
+  </head>
+  <body>
+    <div id="chart_div" style="width: 900px; height: 500px;"></div>
+  </body>
+</html>
+

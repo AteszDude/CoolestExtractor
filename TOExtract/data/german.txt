@@ -1,0 +1,5 @@
+schlecht#bad
+langweilig#boring
+gut#good
+schnell#fast
+interessant#interesting
